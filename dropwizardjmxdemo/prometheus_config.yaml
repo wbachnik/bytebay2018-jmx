@@ -1,0 +1,7 @@
+---
+startDelaySeconds: 0
+rules:
+  - pattern: 'metrics<name=(pl.bytebay.dropwizard.random.value)><>Value: (\d+)'
+    name: $1
+    value: $2
+    type: GAUGE
