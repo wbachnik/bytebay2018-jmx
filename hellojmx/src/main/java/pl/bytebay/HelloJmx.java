@@ -3,7 +3,6 @@ package pl.bytebay;
 import javax.management.MBeanServer;
 import javax.management.ObjectName;
 import java.lang.management.ManagementFactory;
-import java.util.concurrent.BlockingQueue;
 
 public class HelloJmx {
 
@@ -30,8 +29,6 @@ public class HelloJmx {
         // we can listen to our own notifications
         BigChangeListener bigChangeListener = new BigChangeListener();
         mbs.addNotificationListener(new ObjectName("pl.bytebay:type=Notifications"), bigChangeListener, bigChangeListener.getNotificationFilter(), null);
-
-        BlockingQueue bq = new
 
         Thread.sleep(Integer.MAX_VALUE);
     }
