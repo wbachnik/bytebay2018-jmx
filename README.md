@@ -16,7 +16,7 @@
 
 ## Frameworks/Libraries ##
 [Spring Framework and JMX](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/integration.html#jmx)  
-[Dropwizard Metrics](http://metrics.dropwizard.io/4.0.0/getting-started.html) - can be used without Dropwizard, save you lots of work!
+[Dropwizard Metrics](http://metrics.dropwizard.io/4.0.0/getting-started.html) - can be used without Dropwizard, saves you lots of work!
 
 ### Connection Pools ###
 [C3P0 JMX](http://www.mchange.com/projects/c3p0/#jmx_configuration_and_management)  
