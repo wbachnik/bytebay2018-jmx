@@ -3,6 +3,7 @@ package pl.bytebay;
 import javax.management.MBeanServer;
 import javax.management.ObjectName;
 import java.lang.management.ManagementFactory;
+import java.util.concurrent.ArrayBlockingQueue;
 
 public class HelloJmx {
 
@@ -29,6 +30,14 @@ public class HelloJmx {
         // we can listen to our own notifications
         BigChangeListener bigChangeListener = new BigChangeListener();
         mbs.addNotificationListener(new ObjectName("pl.bytebay:type=Notifications"), bigChangeListener, bigChangeListener.getNotificationFilter(), null);
+
+        ArrayBlockingQueue<String> queue = new ArrayBlockingQueue<>(100);
+
+        queue.size();
+        queue.remainingCapacity();
+
+        QueueInfo qi = new QueueInfo(queue);
+        mbs.registerMBean(qi, new ObjectName("pl.bytebay:type=QueueInfo"));
 
         Thread.sleep(Integer.MAX_VALUE);
     }
