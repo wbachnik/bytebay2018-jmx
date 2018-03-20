@@ -1,4 +1,5 @@
 # JMX Workshop @ ByteBay 2018 #
+
 ## Resources ##
 ### JMX Tutorials and Docs ###
 [Simple JMX tutorial from Oracle](https://docs.oracle.com/javase/tutorial/jmx/TOC.html)  
@@ -15,7 +16,7 @@
 
 ## Frameworks/Libraries ##
 [Spring Framework and JMX](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/integration.html#jmx)  
-[Dropwizard Metrics](http://metrics.dropwizard.io/4.0.0/getting-started.html)
+[Dropwizard Metrics](http://metrics.dropwizard.io/4.0.0/getting-started.html) - can be used without Dropwizard, save you lots of work!
 
 ### Connection Pools ###
 [C3P0 JMX](http://www.mchange.com/projects/c3p0/#jmx_configuration_and_management)  
@@ -28,7 +29,21 @@
 [Kafka](https://kafka.apache.org/documentation/#monitoring) uses Metrics, actually
 
 ## APM (kindof) ##
-[Jolokia](https://jolokia.org/) exposes MBeans via HTTP  
-[jmxtrans](http://www.jmxtrans.org/) collects attributes and report or push further  
-[Prometheus](https://prometheus.io/), [JMX Exporter](https://github.com/prometheus/jmx_exporter)  
-[Grafana](https://grafana.com/) dashboarding over Prometheus data
+[Jolokia](https://jolokia.org/) exposes MBeans data via HTTP  
+[jmxtrans](http://www.jmxtrans.org/) collects attributes to report or push further  
+[Prometheus](https://prometheus.io/), collects JMX data, [JMX Exporter](https://github.com/prometheus/jmx_exporter) is needed in your application  
+[Grafana](https://grafana.com/) great-looking dashboarding over Prometheus data
+
+## Troubleshooting ##
+
+In case JMX Agent is not active by default and `jconsole` can't connect,
+you can enable remote connectivity by passing the following paramaters when
+starting java:
+
+```
+-Dcom.sun.management.jmxremote.port=9005
+-Dcom.sun.management.jmxremote.authenticate=false
+-Dcom.sun.management.jmxremote.ssl=false
+```
+
+Please note the security implications, as noted during the workshop!
