@@ -1,5 +1,7 @@
 # JMX Workshop @ ByteBay 2018 #
 
+See `ArrayBlockingQueue-exercise` branch for example workshop exercise solution.
+
 ## Resources ##
 ### JMX Tutorials and Docs ###
 [Simple JMX tutorial from Oracle](https://docs.oracle.com/javase/tutorial/jmx/TOC.html)  
