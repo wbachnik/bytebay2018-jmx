@@ -33,7 +33,7 @@ See `ArrayBlockingQueue-exercise` branch for example workshop exercise solution.
 ## APM (kindof) ##
 [Jolokia](https://jolokia.org/) exposes MBeans data via HTTP  
 [jmxtrans](http://www.jmxtrans.org/) collects attributes to report or push further  
-[Prometheus](https://prometheus.io/), collects JMX data, [JMX Exporter](https://github.com/prometheus/jmx_exporter) is needed in your application  
+[Prometheus](https://prometheus.io/), collects JMX data, [JMX Exporter](https://github.com/prometheus/jmx_exporter) is needed in your application. See additional instructions in [`dropwizardjmxdemo/README.md`](https://github.com/wbachnik/bytebay2018-jmx/blob/master/dropwizardjmxdemo/README.md)  
 [Grafana](https://grafana.com/) great-looking dashboarding over Prometheus data
 
 ## Troubleshooting ##
